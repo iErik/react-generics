@@ -1,0 +1,17 @@
+{
+  "$schema": "node_modules/lerna/schemas/lerna-schema.json",
+  "packages": [
+    "packages/base",
+    "packages/discordance"
+  ],
+  "command": {
+    "publish": {
+      "ignoreChanges": ["*.md"],
+      "message": "Publish",
+      "registry": "https://npm.pkg.github.com"
+    }
+  },
+  "npmClient": "yarn",
+  "useWorkspaces": true,
+  "version": "independent"
+}
