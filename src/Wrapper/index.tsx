@@ -1,7 +1,23 @@
-import { styled } from '../stitches.config'
+import type * as Stitches from '@stitches/react'
+import { stitch } from '..'
+
+// -> Types
+// --------
+
+type HAlignValue = 'right' | 'center' | 'left' | 'stretch'
+type VAlignValue = 'top' | 'center' | 'bottom'
+
+interface WrapperProps extends React.PropsWithChildren {
+  column?: boolean
+  hAlign?: HAlignValue
+  vAlign?: VAlignValue
+  css?: Stitches.CSS
+  className?: string
+  onClick?: Function
+}
 
 // TODO: Add fit-content options
-const Wrapper = styled('div', {
+const Wrapper = stitch('div', {
   display: 'flex',
   width: '100%',
   height: '100%',
@@ -125,3 +141,4 @@ const Wrapper = styled('div', {
 })
 
 export default Wrapper
+export type { WrapperProps }
