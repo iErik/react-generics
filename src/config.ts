@@ -1,11 +1,3 @@
-
-type DirectionalArg = {
-  top?: string | number,
-  left?: string | number,
-  bottom?: string | number,
-  right?: string | number
-}
-
 export default {
   theme: {
     fontSizes: {

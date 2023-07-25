@@ -1,6 +1,6 @@
-import { styled } from '../stitches.config'
+import { stitch } from '..'
 
-const Heading = styled('h1', {
+const Heading = stitch('h1', {
   fontSize: '$3xl'
 })
 

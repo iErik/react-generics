@@ -1,5 +1,11 @@
-export { theme } from './stitches.config'
+export {
+  styled as stitch,
+  theme
+} from './stitched'
+
+export * from './global'
 export { default as baseConfig } from './config'
+
 export * as utils from './utils'
 
 // -> Component exports

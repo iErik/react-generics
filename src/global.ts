@@ -3,7 +3,7 @@ import { globalCss } from './stitched'
 // -> Global
 // ----------
 
-export default globalCss({
+export const baseGlobalCss = {
   '*, *::before, *::after': {
     boxSizing: 'border-box',
     margin: 0,
@@ -42,4 +42,6 @@ export default globalCss({
     cursor: 'pointer',
     '-webkit-appearance': 'none',
   },
-})
+}
+
+export const globalStyles = globalCss(baseGlobalCss)

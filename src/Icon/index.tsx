@@ -1,11 +1,11 @@
-import { styled } from '../stitches.config'
+import { stitch } from '..'
 
 type IconProps = {
   icnName: string,
   size?: number | string
 }
 
-const IconWrapper = styled('div', {
+const IconWrapper = stitch('div', {
   display: 'flex'
 })
 

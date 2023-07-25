@@ -1,6 +1,6 @@
-import { styled } from "../stitches.config";
+import { stitch } from '..'
 
-const BaseGridBox = styled('div', {
+const BaseGridBox = stitch('div', {
 
 })
 

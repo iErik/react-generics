@@ -1,4 +1,4 @@
-import { styled } from '../stitches.config'
+import { stitch } from '..'
 
 // Types
 // -----
@@ -10,7 +10,7 @@ interface InputProps extends JSX.IntrinsicAttributes {
 // Export
 // ------
 
-const TextInputEl = styled('input', {
+const TextInputEl = stitch('input', {
   backgroundColor: '$inputBg',
   color: '$inputFg',
 

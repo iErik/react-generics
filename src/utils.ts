@@ -1,3 +1,4 @@
+import { createStitches } from '@stitches/react'
 import baseConfig from './config'
 
 /**
@@ -12,7 +13,6 @@ export const isType = (
 ): boolean =>
   Object.prototype.toString
     .call(value) === `[object ${constructorName}]`
-
 
 /**
  *
@@ -45,9 +45,11 @@ export const extendObj = (
   }), {})
 }
 
-export const extendConfig = (theme: Record<string, any>) =>
-  extendObj(baseConfig, theme)
+export const extendConfig = (config: Record<string, any>) =>
+  extendObj(baseConfig, config)
 
+export const mkStitches = (config: Record<string, any>) =>
+  createStitches(extendConfig(config))
 
 type RGBCodes = {
   r: string | number,

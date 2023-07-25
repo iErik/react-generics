@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react'
 
-import { styled } from '../stitches.config'
+import { stitch } from '..'
 import TextInput from '../Input'
 import Button from '../Button'
 
@@ -25,21 +25,21 @@ type FormProps = {
 // Fragments
 // ---------
 
-const FormInput = styled(TextInput, {
+const FormInput = stitch(TextInput, {
   '&:not(:last-child)': {
     marginBottom: '10px'
   }
 })
 
-const FormSelect = styled('select', {
+const FormSelect = stitch('select', {
 
 })
 
-const FormRadio = styled('input', {
+const FormRadio = stitch('input', {
 
 })
 
-const FormBox = styled('form', {
+const FormBox = stitch('form', {
   display: 'flex',
   flexDirection: 'column',
 })

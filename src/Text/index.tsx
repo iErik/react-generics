@@ -1,6 +1,6 @@
-import { styled } from '../stitches.config'
+import { stitch } from '..'
 
-const Text = styled('p', {
+const Text = stitch('p', {
   fontSize: '$base',
   margin: 0,
   padding: 0
