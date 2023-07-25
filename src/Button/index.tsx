@@ -1,6 +1,18 @@
-import { styled } from '../stitches.config'
+import type * as Stitches from '@stitches/react'
+import { stitch } from '..'
 
-const Button = styled('button', {
+// -> Types
+// --------
+
+interface ButtonProps extends React.PropsWithChildren {
+  text?: string,
+  children?: React.ReactNode,
+  css?: Stitches.CSS
+  type?: 'button' | 'submit' | 'reset'
+}
+
+
+const Button = stitch('button', {
   borderRadius: '$button',
   padding: '$btnPad',
 
@@ -26,3 +38,4 @@ const Button = styled('button', {
 })
 
 export default Button
+export type { ButtonProps }
