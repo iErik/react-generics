@@ -4,7 +4,7 @@
   "version": "0.1.2",
   "main": "src/index.ts",
   "author": "Erik Isidore <ericssonico@proton.me>",
-  "license": "ISC",
+  "license": "GPL-3",
   "homepage": "https://github.com/iErik/react-generics#readme",
   "publishConfig": {
     "@ierik:registry": "https://npm.pkg.github.com"
