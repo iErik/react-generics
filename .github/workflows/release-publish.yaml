@@ -2,7 +2,9 @@ name: Publish release
 run-name: Publishing package to GitHub NPM Registry
 
 on:
-  push
+  push:
+    branches:
+      - master
 
 jobs:
   build-publish:
