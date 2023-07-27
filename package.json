@@ -12,7 +12,9 @@
   "scripts": {
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build",
-    "release": "standard-version && git push --follow-tags && npm publish"
+    "pre-release": "standard-version && git push --follow-tags",
+    "full-release": "standard-version && git push --follow-tags && npm publish",
+    "release": "npm publish"
   },
   "repository": {
     "type": "git",
