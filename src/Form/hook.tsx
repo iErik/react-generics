@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import type { ReactElement, FunctionComponent } from 'react'
 
 // -> Types
 // --------
@@ -18,7 +19,7 @@ export interface FieldSchema extends JSX.IntrinsicAttributes {
 
 
 export type FieldTypeMap = {
-  [key in InputType]: React.FunctionComponent
+  [key in InputType]: FunctionComponent
 }
 
 // -> Helpers
@@ -30,9 +31,9 @@ export type FieldTypeMap = {
 const mapSchema = (
   typeMap: FieldTypeMap,
   schema: FieldSchema,
-): React.ReactElement => {
+): ReactElement => {
 
-  const Widget: React.FunctionComponent =
+  const Widget: FunctionComponent =
     Object.keys(typeMap).includes(schema.type)
       ? typeMap[schema.type]
       : typeMap[InputType.Text]

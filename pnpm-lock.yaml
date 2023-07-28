@@ -5,6 +5,9 @@ settings:
   excludeLinksFromLockfile: false
 
 dependencies:
+  '@ierik/medley-components':
+    specifier: link:/home/Erik/Git/Medley/packages/components
+    version: link:../Medley/packages/components
   '@stitches/react':
     specifier: ^1.2.8
     version: 1.2.8(react@18.2.0)
