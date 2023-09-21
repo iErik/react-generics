@@ -7,7 +7,26 @@ export default {
       lg:    '24px',
       xl:    '30px',
       '2xl': '38px',
-      '3xl': '45px'
+      '3xl': '45px',
+
+      h5: '$xs',
+      h4: '$sm',
+      h3: '$md',
+      h2: '$lg',
+      h1: '$xl'
+    },
+
+    fontWeights: {
+      thin: 200,
+      light: 300,
+      normal: 400,
+      medium: 500,
+      semiBold: 600,
+      bold: 700,
+      extraBold: 800,
+
+      base: '$normal',
+      title: '$normal'
     }
   },
 

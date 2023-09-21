@@ -17,6 +17,7 @@ export { InputType } from './Form/hook'
 export type { FieldSchema, FieldTypeMap } from './Form/hook'
 
 export { default as BaseButton } from './Button'
+export { default as Flexbox } from './Flexbox'
 export { default as BaseGridBox } from './GridBox'
 export { default as BaseHeading } from './Heading'
 export { default as BaseIcon } from './Icon'
