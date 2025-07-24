@@ -1,6 +1,8 @@
 import type { PropsWithChildren } from 'react'
 import { stitch } from '..'
 
+import { toPixel } from '../utils'
+
 // -> Types
 // --------
 
@@ -11,6 +13,8 @@ export type FlexboxProps = PropsWithChildren & {
   hExpand?: boolean
   vExpand?: boolean
   padding?: string | number
+  gap?: string | number
+  margin?: string | number
 }
 
 // -> Component
@@ -55,7 +59,8 @@ const FlexboxEl = stitch('div', {
 
     column: { true: { flexDirection: 'column' } },
     hExpand: { true: { width: '100%' } },
-    vExpand: { true: { height: '100%' } }
+    vExpand: { true: { height: '100%' } },
+    fill: { true: { width: '100%', height: '100%' } }
   },
 
   compoundVariants: [
@@ -144,11 +149,25 @@ const FlexboxEl = stitch('div', {
 })
 
 const Flexbox = (props: FlexboxProps) => {
+  const css = {
+    ...(props.padding ? {
+      padding: toPixel(props.padding || 0),
+    } : {}),
+
+    ...(props.gap ? {
+      gap : toPixel(props.gap|| 0),
+    } : {}),
+
+    ...(props.margin ? {
+      gap : toPixel(props.margin || 0),
+    } : {}),
+  }
+
   return (
     <FlexboxEl
-      className="cg-flexbox"
+      className="rg-flexbox"
       children={props.children}
-      css={props.padding ? { padding: props.padding } : {}}
+      css={css}
       {...props}
     />
   )

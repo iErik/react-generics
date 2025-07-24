@@ -84,3 +84,16 @@ export const hexToRgb = (
     ].join(', ')})`
   }
 }
+
+export const toPixel = (
+  number: string | number
+): string => {
+  if (isType(number, 'Number'))
+    return `${number}px`
+
+  const asNum = Number(number)
+
+  return Number.isNaN(asNum)
+    ? '0px'
+    : `${asNum}px`
+}
