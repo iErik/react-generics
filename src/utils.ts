@@ -85,6 +85,12 @@ export const hexToRgb = (
   }
 }
 
+export const toRgba = (
+  color: string,
+  opacity: number
+): string | undefined => hexToRgb(color, opacity)?.css
+
+
 export const toPixel = (
   number: string | number
 ): string => {
