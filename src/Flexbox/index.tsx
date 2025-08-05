@@ -9,6 +9,7 @@ import { toPixel } from '../utils'
 export type FlexboxProps = PropsWithChildren & {
   hAlign?:  'left' | 'center' | 'right' | 'stretch'
   vAlign?:  'top' | 'center' | 'bottom'
+  fill?: boolean
   column?:  boolean
   hExpand?: boolean
   vExpand?: boolean
