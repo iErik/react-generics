@@ -1,7 +1,7 @@
 {
   "name": "@ierik/react-generics",
   "description": "",
-  "version": "0.1.8",
+  "version": "0.1.9",
   "main": "src/index.ts",
   "author": "Erik Isidore <ericssonico@proton.me>",
   "license": "GPL-3",
